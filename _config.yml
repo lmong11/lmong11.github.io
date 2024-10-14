@@ -24,10 +24,10 @@ author:
   avatar           : "profile.png"
   name             : "Xuanmao Li"
   pronouns         : # example: "she/her"  
-  bio              : #"Short biography for the left-hand sidebar"
+  bio              : "Meng Student at Cornell University"
   location         : "Ithaca"
   employer         : "Cornell University"
-  uri              : # URL
+  uri              : "https://academicpages.github.io/"
   email            : "xl979@cornell.edu" 
 
   # Academic websites

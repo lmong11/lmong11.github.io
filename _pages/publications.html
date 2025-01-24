@@ -25,7 +25,7 @@ author_profile: true
       {% endunless %}
       <div class="publication-item">
         <h3>{{ post.title }}</h3>
-        <p><strong>Citation:</strong> {{ post.citation | replace: '**', '<b>' | replace: '**', '</b>' }}</p>
+        <p><strong></strong> {{ post.citation | replace: '**', '<b>' | replace: '**', '</b>' }}</p>
         <p><i>{{ post.venue }}</i>, {{ post.year }}</p>
         {% if post.url_pdf %}
           <a href="{{ post.url_pdf }}" target="_blank">[PDF]</a>
@@ -40,7 +40,7 @@ author_profile: true
   {% for post in site.publications reversed %}
     <div class="publication-item">
       <h3>{{ post.title }}</h3>
-      <p><strong>Citation:</strong> {{ post.citation | replace: '**', '<b>' | replace: '**', '</b>' }}</p>
+      <p><strong></strong> {{ post.citation | replace: '**', '<b>' | replace: '**', '</b>' }}</p>
       <p><i>{{ post.venue }}</i>, {{ post.year }}</p>
       {% if post.url_pdf %}
         <a href="{{ post.url_pdf }}" target="_blank">[PDF]</a>

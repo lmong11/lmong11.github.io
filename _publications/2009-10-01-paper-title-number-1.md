@@ -2,7 +2,6 @@
 title: "Automatic data transformation using large language model-an experimental study on building energy data"
 collection: publications
 category: conferences
-date: 2023/12/15
 venue: '2023 IEEE International Conference on Big Data (BigData)'
 slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: 'http://academicpages.github.io/files/paper1.pdf'

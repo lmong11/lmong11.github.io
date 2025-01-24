@@ -3,8 +3,8 @@ title: "Automatic data transformation using large language model-an experimental
 collection: publications
 category: conferences
 venue: '2023 IEEE Big Data'
-slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: 'http://academicpages.github.io/files/paper1.pdf'
+paperurl: 'files/Automatic_Data_Transformation_Using_Large_Language_Model_-_An_Experimental_Study_on_Building_Energy_Data.pdf'
+githuburl: 'https://github.com/asu-cactus/ChatGPTwithSQLscript'
 citation: 'Ankita Sharma, **Xuanmao Li**, Hong Guan, Guoxin Sun, Liang Zhang, Lanjun Wang, Kesheng Wu, Lei Cao, Erkang Zhu, Alexander Sim, Teresa Wu, Jia Zou
 '
 ---

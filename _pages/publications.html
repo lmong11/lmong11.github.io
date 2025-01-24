@@ -11,7 +11,7 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- Updated rendering style with fixed bold formatting and commas -->
+<!-- Updated rendering style with fixed bold formatting, proper citation, and added PDF/GitHub links -->
 {% if site.publication_category %}
   {% for category in site.publication_category  %}
     {% assign title_shown = false %}
@@ -27,11 +27,11 @@ author_profile: true
         <h3>{{ post.title }}</h3>
         <p><strong>Citation:</strong> {{ post.citation | replace: '**', '<b>' | replace: '**', '</b>' }}</p>
         <p><i>{{ post.venue }}</i> {{ post.year }}</p>
-        {% if post.url_pdf %}
-          <a href="{{ post.url_pdf }}" target="_blank">[PDF]</a>
+        {% if post.paperurl %}
+          <a href="{{ post.paperurl }}" target="_blank">[PDF]</a>
         {% endif %}
-        {% if post.url_github %}
-          <a href="{{ post.url_github }}" target="_blank">[GitHub]</a>
+        {% if post.githuburl %}
+          <a href="{{ post.githuburl }}" target="_blank">[GitHub]</a>
         {% endif %}
       </div>
     {% endfor %}
@@ -42,11 +42,11 @@ author_profile: true
       <h3>{{ post.title }}</h3>
       <p><strong>Citation:</strong> {{ post.citation | replace: '**', '<b>' | replace: '**', '</b>' }}</p>
       <p><i>{{ post.venue }}</i> {{ post.year }}</p>
-      {% if post.url_pdf %}
-        <a href="{{ post.url_pdf }}" target="_blank">[PDF]</a>
+      {% if post.paperurl %}
+        <a href="{{ post.paperurl }}" target="_blank">[PDF]</a>
       {% endif %}
-      {% if post.url_github %}
-        <a href="{{ post.url_github }}" target="_blank">[GitHub]</a>
+      {% if post.githuburl %}
+        <a href="{{ post.githuburl }}" target="_blank">[GitHub]</a>
       {% endif %}
     </div>
   {% endfor %}

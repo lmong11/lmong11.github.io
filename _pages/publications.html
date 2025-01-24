@@ -11,7 +11,7 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- Updated rendering style with citations -->
+<!-- Updated rendering style with formatted citations -->
 {% if site.publication_category %}
   {% for category in site.publication_category  %}
     {% assign title_shown = false %}
@@ -25,14 +25,13 @@ author_profile: true
       {% endunless %}
       <div class="publication-item">
         <h3>{{ post.title }}</h3>
-        <p>{{ post.authors }}</p>
+        <p><strong>Citation:</strong> {{ post.citation | replace: '**', '<b>' | replace: '**', '</b>' }}</p>
         <p><i>{{ post.venue }}</i>, {{ post.year }}</p>
-        <p><strong>Citation:</strong> {{ post.citation }}</p>
         {% if post.url_pdf %}
-          <a href="{{ post.url_pdf }}" target="_blank">PDF</a>
+          <a href="{{ post.url_pdf }}" target="_blank">[PDF]</a>
         {% endif %}
-        {% if post.url_slides %}
-          <a href="{{ post.url_slides }}" target="_blank">Slides</a>
+        {% if post.url_github %}
+          <a href="{{ post.url_github }}" target="_blank">[GitHub]</a>
         {% endif %}
       </div>
     {% endfor %}
@@ -41,14 +40,13 @@ author_profile: true
   {% for post in site.publications reversed %}
     <div class="publication-item">
       <h3>{{ post.title }}</h3>
-      <p>{{ post.authors }}</p>
+      <p><strong>Citation:</strong> {{ post.citation | replace: '**', '<b>' | replace: '**', '</b>' }}</p>
       <p><i>{{ post.venue }}</i>, {{ post.year }}</p>
-      <p><strong>Citation:</strong> {{ post.citation }}</p>
       {% if post.url_pdf %}
-        <a href="{{ post.url_pdf }}" target="_blank">PDF</a>
+        <a href="{{ post.url_pdf }}" target="_blank">[PDF]</a>
       {% endif %}
-      {% if post.url_slides %}
-        <a href="{{ post.url_slides }}" target="_blank">Slides</a>
+      {% if post.url_github %}
+        <a href="{{ post.url_github }}" target="_blank">[GitHub]</a>
       {% endif %}
     </div>
   {% endfor %}

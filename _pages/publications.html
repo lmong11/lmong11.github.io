@@ -11,7 +11,7 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
+<!-- Updated rendering style without prefixes -->
 {% if site.publication_category %}
   {% for category in site.publication_category  %}
     {% assign title_shown = false %}
@@ -23,14 +23,31 @@ author_profile: true
         <h2>{{ category[1].title }}</h2><hr />
         {% assign title_shown = true %}
       {% endunless %}
-      {% include archive-single.html %}
+      <div class="publication-item">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.authors }}</p>
+        <p><i>{{ post.venue }}</i>, {{ post.year }}</p>
+        {% if post.url_pdf %}
+          <a href="{{ post.url_pdf }}" target="_blank">PDF</a>
+        {% endif %}
+        {% if post.url_slides %}
+          <a href="{{ post.url_slides }}" target="_blank">Slides</a>
+        {% endif %}
+      </div>
     {% endfor %}
   {% endfor %}
 {% else %}
   {% for post in site.publications reversed %}
-    {% include archive-single.html %}
+    <div class="publication-item">
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.authors }}</p>
+      <p><i>{{ post.venue }}</i>, {{ post.year }}</p>
+      {% if post.url_pdf %}
+        <a href="{{ post.url_pdf }}" target="_blank">PDF</a>
+      {% endif %}
+      {% if post.url_slides %}
+        <a href="{{ post.url_slides }}" target="_blank">Slides</a>
+      {% endif %}
+    </div>
   {% endfor %}
 {% endif %}
-
-
-

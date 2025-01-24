@@ -11,7 +11,7 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- Updated rendering style without prefixes -->
+<!-- Updated rendering style with citations -->
 {% if site.publication_category %}
   {% for category in site.publication_category  %}
     {% assign title_shown = false %}
@@ -27,6 +27,7 @@ author_profile: true
         <h3>{{ post.title }}</h3>
         <p>{{ post.authors }}</p>
         <p><i>{{ post.venue }}</i>, {{ post.year }}</p>
+        <p><strong>Citation:</strong> {{ post.citation }}</p>
         {% if post.url_pdf %}
           <a href="{{ post.url_pdf }}" target="_blank">PDF</a>
         {% endif %}
@@ -42,6 +43,7 @@ author_profile: true
       <h3>{{ post.title }}</h3>
       <p>{{ post.authors }}</p>
       <p><i>{{ post.venue }}</i>, {{ post.year }}</p>
+      <p><strong>Citation:</strong> {{ post.citation }}</p>
       {% if post.url_pdf %}
         <a href="{{ post.url_pdf }}" target="_blank">PDF</a>
       {% endif %}

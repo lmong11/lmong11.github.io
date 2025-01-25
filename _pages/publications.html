@@ -7,32 +7,28 @@ author_profile: true
 
 {% if site.author.googlescholar %}
   <div class="wordwrap">
-    You can also find my articles on 
+    You can also find my articles on
     <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.
   </div>
 {% endif %}
 
 {% include base_path %}
 
-{% comment %}
-  Simple loop through each publication in reverse date order.
-  For each publication, we show:
-    - Title
-    - Author list (from `citation`, with your **bold** text replaced by <b>)
-    - Venue + year
-    - PDF link (if available)
-    - GitHub link (if available)
-{% endcomment %}
 {% for post in site.publications reversed %}
-  <div class="publication-item" style="margin-bottom: 1.5em;">
-    <h3 style="margin-bottom: 0.3em;">{{ post.title }}</h3>
-    <p style="margin: 0 0 0.3em 0;">
-      {{ post.citation | replace: '**', '<b>' | replace: '**', '</b>' }}
+  <div class="publication-item" style="margin-bottom: 2em;">
+    <!-- Larger title -->
+    <h2 style="margin-bottom: 0.3em; font-size: 1.25em;">{{ post.title }}</h2>
+    
+    <!-- Use markdownify so **...** is interpreted correctly -->
+    <p style="margin: 0 0 0.4em 0;">
+      {{ post.citation | markdownify }}
     </p>
-    <p style="margin: 0 0 0.3em 0;">
+
+    <p style="margin: 0 0 0.4em 0;">
       <i>{{ post.venue }}</i>
-      {% if post.year %}{{ " " }}{{ post.year }}{% endif %}
+      {% if post.year %} {{ post.year }}{% endif %}
     </p>
+
     <p style="margin: 0;">
       {% if post.paperurl %}
         <a href="{{ post.paperurl }}" target="_blank">[PDF]</a>

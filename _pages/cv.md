@@ -9,7 +9,7 @@ redirect_from:
 
 <!-- Adjust the path to your PDF file as needed -->
 <embed 
-  src="{{ 'files/cv.pdf' | relative_url }}" 
+  src="{{ 'files/cv_2.pdf' | relative_url }}" 
   type="application/pdf" 
   width="100%" 
   height="800px" 
@@ -17,7 +17,7 @@ redirect_from:
 
 <!-- Optional fallback link if embed doesn't load -->
 <p>If the PDF does not display, please 
-   <a href="{{ 'files/cv.pdf' | relative_url }}" target="_blank">
+   <a href="{{ 'files/cv_2.pdf' | relative_url }}" target="_blank">
      click here
    </a> 
    to view or download it.
